@@ -4,3 +4,16 @@
     right: 0;
     bottom: 0;
     }
+
+    .card-body {
+        flex: 1 1 auto;
+        padding: 0.5rem;
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+
+        .chat-bobble{
+            display: inline-block;
+        }
