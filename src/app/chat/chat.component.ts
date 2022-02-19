@@ -7,8 +7,11 @@ import { ChatService } from '../chat.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
+  //Variables 
   currentMessage: string = "";
   messages: string[] = [];
+  isVisible: boolean = true;
+
   constructor(private chatService: ChatService) { }
 
   ngOnInit(): void {

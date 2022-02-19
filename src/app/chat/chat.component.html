@@ -1,13 +1,16 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem; border-color: #369;">
     <div class="card-body">
-        <h5 class="card-title">Chat</h5>
-        <ul>
-            <li *ngFor = "let message of messages">{{message}}</li>
-        </ul>
-        <div class="mb-3">
-            <!--[(ngModel)] is 2 way binding-->
-            <textarea [(ngModel)] = "currentMessage" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <h5 class="card-title" (click)="isVisible = !isVisible">Chat</h5>
+        <div *ngIf="isVisible">
+            <div class="ms-0.5" *ngFor="let message of messages">
+                <div class="p-3 mb-2 bg-primary bg-gradient rounded-pill text-white chat-bobble">{{message}}</div>
+            </div>
+            <div class="mb-3">
+                <!--[(ngModel)] is 2 way binding-->
+                <textarea [(ngModel)]="currentMessage" class="form-control" style="border-color: #369;" id="exampleFormControlTextarea1"
+                    rows="3"></textarea>
+            </div>
+            <span style="color: #369; border-color: #369; background-color: transparent; " (click)="sendMessage()"><i class="fa fa-paper-plane"></i></span>
         </div>
-        <button class="btn btn-outline-primary" (click) = "sendMessage()" ><i class="fa fa-paper-plane"></i></button>
     </div>
 </div>
