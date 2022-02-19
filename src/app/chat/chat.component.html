@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Chat</h5>
+        <ul>
+            <li *ngFor = "let message of messages">{{message}}</li>
+        </ul>
+        <div class="mb-3">
+            <!--[(ngModel)] is 2 way binding-->
+            <textarea [(ngModel)] = "currentMessage" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button class="btn btn-outline-primary" (click) = "sendMessage()" ><i class="fa fa-paper-plane"></i></button>
+    </div>
+</div>
