@@ -3,6 +3,8 @@
     position: fixed;
     right: 0;
     bottom: 0px;
+    color:#369;
+    background-color: rgba(51, 102, 153, 0.089);
     }
 
     .card-body {
@@ -16,4 +18,5 @@
 
         .chat-bobble{
             display: inline-block;
+            
         }
